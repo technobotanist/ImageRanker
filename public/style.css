@@ -1,0 +1,219 @@
+/* === Reset and Base Styling === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* === Header Styling === */
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* === Navigation Bar === */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+nav button, nav select {
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+nav button:hover, nav select:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button:focus, nav select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* === Reset Session Button === */
+#resetSessionBtn {
+  background: #dc3545; /* Bootstrap Danger Red */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#resetSessionBtn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* === Main Content Areas === */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* === Results Container === */
+#resultsContainer {
+  text-align: center;
+  max-width: 700px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode #resultsContainer {
+  background: #292929;
+  color: #ddd;
+}
+
+/* === Comparison Container === */
+#compareContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+#compareContainer .selectable-image {
+  max-width: calc(40vw - 20px); /* Adjust width based on window size */
+  max-height: 70vh; /* Ensure images don't exceed 70% of the viewport height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  background: #fff;
+}
+
+#compareContainer .selectable-image:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+body.dark-mode #compareContainer .selectable-image {
+  background: #333;
+}
+
+body.dark-mode #compareContainer .selectable-image:hover {
+  border-color: #66b2ff;
+  box-shadow: 0 4px 8px rgba(102, 178, 255, 0.2);
+}
+
+/* === Leaderboard Container === */
+#leaderboardContainer {
+  width: 100%;
+  max-width: 700px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode #leaderboardContainer {
+  background: #292929;
+  color: #ddd;
+}
+
+#leaderboardContainer h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2f2f2f;
+  transition: color 0.3s;
+}
+
+body.dark-mode #leaderboardContainer h2 {
+  color: #fff;
+}
+
+#leaderboardContainer ol {
+  list-style: decimal inside;
+}
+
+#leaderboardContainer li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* === Comparison Count === */
+#comparisonCount {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* === Footer Styling === */
+footer {
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+body.dark-mode footer {
+  color: #bbb;
+}
+
+/* === Dark Mode === */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #ddd;
+}
+
+body.dark-mode nav button,
+body.dark-mode nav select {
+  background: #444;
+  color: #ddd;
+}
+
+body.dark-mode nav button:hover,
+body.dark-mode nav select:hover {
+  background: #555;
+}

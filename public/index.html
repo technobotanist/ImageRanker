@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Ranking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- === Loading Spinner === -->
+  <div id="loadingSpinner" class="hidden" aria-hidden="true" role="status" aria-label="Loading">
+    <div class="spinner"></div>
+  </div>
+  
+  <!-- === Confirmation Message === -->
+  <div id="confirmationMessage" aria-live="assertive" role="alert"></div>
+
+  <!-- === Header === -->
+  <header>
+    <h1>Image Ranking System</h1>
+  </header>
+
+  <!-- === Navigation Bar === -->
+  <nav>
+    <button id="deduplicateBtn" aria-label="Remove Duplicates">Remove Duplicates</button>
+    <button id="startBtn" aria-label="Start Elo Ranking">Start Elo Ranking</button>
+    <button id="loadResultsBtn" aria-label="Load Previous Results">Load Previous Results</button>
+    <button id="downloadBtn" aria-label="Download Elo Ratings">Download Elo Ratings</button>
+    <button id="resetSessionBtn" aria-label="Reset Session">Reset Session</button>
+    <button id="toggleDarkBtn" aria-label="Toggle Dark Mode">Dark Mode</button>
+    <label for="pairingOptions" class="visually-hidden">Pairing Method:</label>
+    <select id="pairingOptions" aria-label="Select Pairing Method">
+      <option value="random">Random</option>
+      <option value="hybrid">Hybrid</option>
+      <option value="targeted">Targeted</option>
+    </select>
+  </nav>
+
+  <!-- === Main Content === -->
+  <main>
+    <!-- === Results Container === -->
+    <section id="resultsContainer" aria-live="polite">
+      <p>Results and messages will appear here.</p>
+    </section>
+
+    <!-- === Comparison Container === -->
+    <section id="compareContainer" aria-live="polite">
+      <!-- Images for comparison will be dynamically inserted here -->
+    </section>
+
+    <!-- === Leaderboard Container === -->
+    <section id="leaderboardContainer" aria-live="polite">
+      <!-- Top 5 images (leaderboard) will be dynamically displayed here -->
+    </section>
+
+    <!-- === Comparison Count === -->
+    <section id="comparisonCount" aria-live="polite">
+      Comparisons: 0
+    </section>
+  </main>
+
+  <!-- === Footer === -->
+  <footer>
+    <p>Powered by the Elo Rating System</p>
+  </footer>
+
+  <!-- === JavaScript === -->
+  <script src="client.js"></script>
+</body>
+</html>
