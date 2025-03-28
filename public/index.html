@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Image Ranking System</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NC State Libraries Image Ranking</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- === Loading Spinner === -->
-  <div id="loadingSpinner" class="hidden" aria-hidden="true" role="status" aria-label="Loading">
-    <div class="spinner"></div>
-  </div>
-  
-  <!-- === Confirmation Message === -->
-  <div id="confirmationMessage" aria-live="assertive" role="alert"></div>
+    <!-- === Loading Spinner === -->
+    <div id="loadingSpinner" class="hidden" aria-hidden="true" role="status" aria-label="Loading">
+        <div class="spinner"></div>
+    </div>
 
-  <!-- === Header === -->
-  <header>
-    <h1>Image Ranking System</h1>
-  </header>
+    <!-- === Confirmation Message === -->
+    <div id="confirmationMessage" aria-live="assertive" role="alert"></div>
 
-  <!-- === Navigation Bar === -->
-  <nav>
-    <button id="deduplicateBtn" aria-label="Remove Duplicates">Remove Duplicates</button>
-    <button id="startBtn" aria-label="Start Elo Ranking">Start Elo Ranking</button>
-    <button id="loadResultsBtn" aria-label="Load Previous Results">Load Previous Results</button>
-    <button id="downloadBtn" aria-label="Download Elo Ratings">Download Elo Ratings</button>
-    <button id="resetSessionBtn" aria-label="Reset Session">Reset Session</button>
-    <button id="toggleDarkBtn" aria-label="Toggle Dark Mode">Dark Mode</button>
-    <label for="pairingOptions" class="visually-hidden">Pairing Method:</label>
-    <select id="pairingOptions" aria-label="Select Pairing Method">
-      <option value="random">Random</option>
-      <option value="hybrid">Hybrid</option>
-      <option value="targeted">Targeted</option>
-    </select>
-  </nav>
+    <!-- === Header === -->
+    <header>
+        <h1>DH Hill West Wing Image Ranking</h1>
+    </header>
 
-  <!-- === Main Content === -->
-  <main>
-    <!-- === Results Container === -->
-    <section id="resultsContainer" aria-live="polite">
-      <p>Results and messages will appear here.</p>
-    </section>
+    <!-- === Navigation Bar === -->
+    <nav>
+        <button id="deduplicateBtn" aria-label="Remove Duplicates">Remove Duplicates</button>
+        <button id="startBtn" aria-label="Start Elo Ranking">Start Elo Ranking</button>
+        <button id="loadResultsBtn" aria-label="Load Previous Results">Load Previous Results</button>
+        <button id="downloadBtn" aria-label="Download Elo Ratings">Download Elo Ratings</button>
+        <button id="resetSessionBtn" aria-label="Reset Session">Reset Session</button>
+        <button id="toggleDarkBtn" aria-label="Toggle Dark Mode">Dark Mode</button>
+        <label for="pairingOptions" class="visually-hidden">Pairing Method:</label>
+        <select id="pairingOptions" aria-label="Select Pairing Method">
+            <option value="random">Random</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="targeted">Targeted</option>
+        </select>
+    </nav>
 
-    <!-- === Comparison Container === -->
-    <section id="compareContainer" aria-live="polite">
-      <!-- Images for comparison will be dynamically inserted here -->
-    </section>
+    <!-- === Main Content === -->
+    <main>
+        <!-- === Project Description === -->
+        <section id="projectDescription" aria-labelledby="projectDescriptionTitle">
+            <h2 id="projectDescriptionTitle">Project Description</h2>
+            <p>
+                We are selecting images of student life, Libraries spaces, and visually compelling designs.
+                <br />
+                Our goal is to highlight real representations of the student population and active, dynamic scenes of students and faculty in the Libraries and on the Brickyard.
+                <br />
+                The initiative aims to make these spaces feel more human, while spotlighting the history of Libraries initiatives and campus archives.
+                <br />
+                As the home of University history, we want to present evidence of NC State’s past and student stories.
+            </p>
+        </section>
 
-    <!-- === Leaderboard Container === -->
-    <section id="leaderboardContainer" aria-live="polite">
-      <!-- Top 5 images (leaderboard) will be dynamically displayed here -->
-    </section>
+        <!-- === Results Container === -->
+        <section id="resultsContainer" aria-live="polite">
+            <p>Results and messages will appear here.</p>
+        </section>
 
-    <!-- === Comparison Count === -->
-    <section id="comparisonCount" aria-live="polite">
-      Comparisons: 0
-    </section>
-  </main>
+        <!-- === Comparison Container === -->
+        <section id="compareContainer" aria-live="polite">
+            <!-- Images for comparison will be dynamically inserted here -->
+        </section>
 
-  <!-- === Footer === -->
-  <footer>
-    <p>Powered by the Elo Rating System</p>
-  </footer>
+        <!-- === Leaderboard Container === -->
+        <section id="leaderboardContainer" aria-live="polite">
+            <!-- Top images will be dynamically displayed here -->
+        </section>
 
-  <!-- === JavaScript === -->
-  <script src="client.js"></script>
+        <!-- === Comparison Count === -->
+        <section id="comparisonCount" aria-live="polite">
+            Comparisons: 0
+        </section>
+    </main>
+
+    <!-- === Footer === -->
+    <footer>
+        <p>Powered by the Elo Rating System</p>
+    </footer>
+
+    <!-- === JavaScript === -->
+    <script src="client.js"></script>
 </body>
 </html>
